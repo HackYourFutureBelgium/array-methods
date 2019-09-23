@@ -53,7 +53,7 @@
 
 
       <section id='push' class='method-section'>
-        <input id='push-input'></input>
+        <input id='push-input' placeholder="newValue"></input>
         <br>
         <button id='mutating-push-button'>mutated.push(newValue);</button>
         <a class='docs-link'
@@ -73,7 +73,7 @@
       </section>
 
       <section id='unshift' class='method-section'>
-        <input id='unshift-input'></input>
+        <input id='unshift-input' placeholder="newValue"></input>
         <br>
         <button id='mutating-unshift-button'>mutated.unshift(newValue);</button>
         <a class='docs-link'
@@ -112,9 +112,9 @@
       </section>
 
       <section id='splice' class='method-section'>
-        <input id='splice-input-a'></input>
-        <input id='splice-input-b'></input>
-        <input id='splice-input-c'></input>
+        <input id='splice-input-a' placeholder="a"></input>
+        <input id='splice-input-b' placeholder="b"></input>
+        <input id='splice-input-c' placeholder="c"></input>
         <br>
         <button id='mutating-splice-button'>mutated.splice(a,b,c);</button>
         <a class='docs-link'
@@ -153,7 +153,7 @@
       </section>
 
       <section id='non-push' class='method-section'>
-        <input id='non-push-input'></input>
+        <input id='non-push-input' placeholder="newValue"></input>
         <br>
         <button id='non-push-button'>const pushedCopy = [...nonMutated, newValue];</button>
       </section>
@@ -168,7 +168,7 @@
       </section>
 
       <section id='non-unshift' class='method-section'>
-        <input id='non-unshift-input'></input>
+        <input id='non-unshift-input' placeholder="newValue"></input>
         <br>
         <button id='non-unshift-button'>const unshiftedCopy = [newValue, ...nonMutated];</button>
       </section>
@@ -197,9 +197,9 @@
       </section>
 
       <section id='non-splice' class='method-section'>
-        <input id='non-splice-input-a'></input>
-        <input id='non-splice-input-b'></input>
-        <input id='non-splice-input-c'></input>
+        <input id='non-splice-input-a' placeholder="a"></input>
+        <input id='non-splice-input-b' placeholder="b"></input>
+        <input id='non-splice-input-c' placeholder="c"></input>
         <br>
         <button id='non-splice-button'>const splicedCopy = [...nonMutated.slice(0, a), c,
           ...nonMutated.slice(a + b)];</button>
