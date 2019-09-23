@@ -1,2 +1,2 @@
-const mutated = ['c', 'b', 'a', 'x', 'y', 'z'];
-const nonMutated = ['c', 'b', 'a', 'x', 'y', 'z'];
+const mutated = ['b', 'a', 'y', 'z'];
+const nonMutated = ['b', 'a', 'y', 'z'];
