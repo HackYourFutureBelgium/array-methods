@@ -1,0 +1,34 @@
+header {
+  border-style: none none solid none;
+}
+
+input {
+  width: 45px;
+}
+
+a {
+  font-size: small;
+}
+
+.method-section {
+  border-style: none none inset none;
+  margin: 10px 10px 10px 10px;
+}
+
+.docs-link {
+  float: right;
+}
+
+.right-section {
+  border-style: none none none solid;
+  padding-left: 10px;
+}
+
+.demo-container {
+  display: flex;
+  flex-direction: row;
+}
+
+footer {
+  border-style: solid none none none;
+}
