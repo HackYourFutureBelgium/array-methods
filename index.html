@@ -28,7 +28,7 @@
     <a href='https://github.com/janke-learning/reference-vs-value' target="_blanke">reference vs. value</a>,
     <a href='https://github.com/janke-learning/reference-type-exercises/blob/master/array-exercises.md'
       target="_blank">referencing arrays (exercises)</a>,
-    <a href="http://www.pythontutor.com/live.html#code=const%20mutating%20%3D%20%5B'c',%20'd','e','a','b'%5D%3B%0Aconst%20nonMutate%20%3D%20%5B'c',%20'd','e','a','b'%5D%3B%0A%0Aconst%20falseCopy%20%3D%20mutating%3B%0Aconst%20trueCopy%20%3D%20%5B...nonMutate%5D%3B%0A%0Aconst%20push%20%3D%20mutating.push%28'pu'%29%3B%0Aconst%20nonPush%20%3D%20%5B...nonMutate,%20'pu'%5D%3B%0A%0Aconst%20pop%20%3D%20mutating.pop%28%29%3B%0Aconst%20nonPop%20%3D%20nonMutate.slice%280,%20-1%29%3B%0A%0Aconst%20unshift%20%3D%20mutating.unshift%28'un'%29%3B%0Aconst%20nonUnshift%20%3D%20%5B'un',%20...nonMutate%5D%3B%0A%0Aconst%20shift%20%3D%20mutating.shift%28%29%3B%0Aconst%20nonShift%20%3D%20nonMutate.slice%281%29%3B%0A%0Aconst%20reverse%20%3D%20mutating.reverse%28%29%3B%0Aconst%20nonReverse%20%3D%20%5B...nonMutate%5D.reverse%28%29%3B%0A%0Aconst%20sort%20%3D%20mutating.sort%28%29%3B%0Aconst%20nonSort%20%3D%20%5B...nonMutate%5D.sort%28%29%3B%0A%0Aconst%20splice%20%3D%20mutating.splice%281,%203,%20NaN%29%3B%0Aconst%20nonSplice%20%3D%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20...nonMutate.slice%280,%201%29,%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20NaN,%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20...nonMutate.slice%283%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5D%3B&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false"
+    <a href="http://www.pythontutor.com/live.html#code=const%20mutating%20%3D%20%5B'c',%20'd','e','a','b'%5D%3B%0Aconst%20nonMutate%20%3D%20%5B'c',%20'd','e','a','b'%5D%3B%0A%0Aconst%20falseCopy%20%3D%20mutating%3B%0Aconst%20trueCopy%20%3D%20%5B...nonMutate%5D%3B%0A%0Aconst%20push%20%3D%20mutating.push%28'pu'%29%3B%0AfalseCopy.push%28'sh'%29%3B%0Aconst%20nonPush%20%3D%20%5B...nonMutate,%20'pu'%5D%3B%0A%0Aconst%20pop%20%3D%20mutating.pop%28%29%3B%0Aconst%20nonPop%20%3D%20nonMutate.slice%280,%20-1%29%3B%0A%0Aconst%20unshift%20%3D%20mutating.unshift%28'un'%29%3B%0Aconst%20nonUnshift%20%3D%20%5B'un',%20...nonMutate%5D%3B%0A%0Aconst%20shift%20%3D%20mutating.shift%28%29%3B%0Aconst%20nonShift%20%3D%20nonMutate.slice%281%29%3B%0A%0Aconst%20reverse%20%3D%20mutating.reverse%28%29%3B%0Aconst%20nonReverse%20%3D%20%5B...nonMutate%5D.reverse%28%29%3B%0A%0Aconst%20sort%20%3D%20mutating.sort%28%29%3B%0Aconst%20nonSort%20%3D%20%5B...nonMutate%5D.sort%28%29%3B%0A%0Aconst%20splice%20%3D%20mutating.splice%281,%203,%20NaN%29%3B%0Aconst%20nonSplice%20%3D%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20...nonMutate.slice%280,%201%29,%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20NaN,%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20...nonMutate.slice%283%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5D%3B&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false"
       target="_blank">these examples side-by-side on JS Tutor</a>
   </header>
 
@@ -37,6 +37,7 @@
       <a href='https://medium.com/@timhancodes/javascript-array-methods-cheatsheet-633f761ac250' target='_blank'>
         <h2> Mutating Array Methods</h2>
       </a>
+      <h3>(modify the original array)</h3>
 
 
       <section id='mutating-array' class='method-section'>
@@ -50,7 +51,6 @@
       <section id='false-copy' class='method-section'>
         <button id='false-copy-button'>const falseCopyOfArray = mutated;</button>
       </section>
-
 
       <section id='push' class='method-section'>
         <input id='push-input' placeholder="newValue"></input>
@@ -129,10 +129,22 @@
       <section id='mutating-array-history'></section>
     </section>
 
+    <script src='mutating-handlers/arr.js'></script>
+    <script src='mutating-handlers/false-copy.js'></script>
+    <script src='mutating-handlers/pop.js'></script>
+    <script src='mutating-handlers/push.js'></script>
+    <script src='mutating-handlers/reverse.js'></script>
+    <script src='mutating-handlers/shift.js'></script>
+    <script src='mutating-handlers/sort.js'></script>
+    <script src='mutating-handlers/splice.js'></script>
+    <script src='mutating-handlers/unshift.js'></script>
+
+
     <section id='non-mutating' class='right-section'>
       <a href='https://vincent.billey.me/pure-javascript-immutable-array/' target='_blank'>
-        <h2> Non-Mutating Array Methods</h2>
+        <h2>/h2> Non-Mutating Array Methods</h2>
       </a>
+      <h3>(create a new, modified array)</h3>
 
 
       <section id='non-mutating-array' class='method-section'>
@@ -144,7 +156,7 @@
       </section>
 
       <section id='non-copy' class='method-section'>
-        <button id='non-copy-button'>const copyOfArray = [...nonMutated];</button>
+        <button id='non-copy-button'>const trueCopyOfArray = [...nonMutated];</button>
         <a class="docs-link"
           href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax'
           target='_blank'>
@@ -216,16 +228,6 @@
         src="https://user-images.githubusercontent.com/18554853/63941625-4c7c3d00-ca6c-11e9-9a76-8d5e3632fe70.jpg"
         width="100" height="100"></a>
   </footer>
-
-  <script src='mutating-handlers/arr.js'></script>
-  <script src='mutating-handlers/false-copy.js'></script>
-  <script src='mutating-handlers/pop.js'></script>
-  <script src='mutating-handlers/push.js'></script>
-  <script src='mutating-handlers/reverse.js'></script>
-  <script src='mutating-handlers/shift.js'></script>
-  <script src='mutating-handlers/sort.js'></script>
-  <script src='mutating-handlers/splice.js'></script>
-  <script src='mutating-handlers/unshift.js'></script>
 
   <script src='non-mutating-handlers/arr-non.js'></script>
   <script src='non-mutating-handlers/copy-non.js'></script>
