@@ -7,7 +7,7 @@ function nonUnshiftHandler() {
   const unshiftedCopy = [newValue, ...nonMutated];
 
   // write result to UI
-  const codeString = 'const unshiftedCopy = [newValue, ...nonMutated];';
+  const codeString = `const unshiftedCopy = [${newValue}, ...nonMutated];`;
 
   const currentRendered = renderArray(unshiftedCopy, codeString);
   const nonMutatedHistory = document.getElementById('non-array-history');
