@@ -19,9 +19,14 @@ a {
   float: right;
 }
 
+.left-section{
+  width: 50%;
+}
+
 .right-section {
   border-style: none none none solid;
   padding-left: 10px;
+  width: 50%;
 }
 
 .demo-container {

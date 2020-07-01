@@ -25,105 +25,127 @@
 
   <header>
     some helpful links:
-    <a href='https://github.com/janke-learning/reference-vs-value' target="_blanke">reference vs. value</a>,
-    <a href='https://github.com/janke-learning/reference-type-exercises/blob/master/array-exercises.md'
-      target="_blank">referencing arrays (exercises)</a>,
     <a href="http://www.pythontutor.com/live.html#code=const%20mutating%20%3D%20%5B'c',%20'd','e','a','b'%5D%3B%0Aconst%20nonMutate%20%3D%20%5B'c',%20'd','e','a','b'%5D%3B%0A%0Aconst%20falseCopy%20%3D%20mutating%3B%0Aconst%20trueCopy%20%3D%20%5B...nonMutate%5D%3B%0A%0Aconst%20push%20%3D%20mutating.push%28'pu'%29%3B%0AfalseCopy.push%28'sh'%29%3B%0Aconst%20nonPush%20%3D%20%5B...nonMutate,%20'pu'%5D%3B%0A%0Aconst%20pop%20%3D%20mutating.pop%28%29%3B%0Aconst%20nonPop%20%3D%20nonMutate.slice%280,%20-1%29%3B%0A%0Aconst%20unshift%20%3D%20mutating.unshift%28'un'%29%3B%0Aconst%20nonUnshift%20%3D%20%5B'un',%20...nonMutate%5D%3B%0A%0Aconst%20shift%20%3D%20mutating.shift%28%29%3B%0Aconst%20nonShift%20%3D%20nonMutate.slice%281%29%3B%0A%0Aconst%20reverse%20%3D%20mutating.reverse%28%29%3B%0Aconst%20nonReverse%20%3D%20%5B...nonMutate%5D.reverse%28%29%3B%0A%0Aconst%20sort%20%3D%20mutating.sort%28%29%3B%0Aconst%20nonSort%20%3D%20%5B...nonMutate%5D.sort%28%29%3B%0A%0Aconst%20splice%20%3D%20mutating.splice%281,%203,%20NaN%29%3B%0Aconst%20nonSplice%20%3D%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20...nonMutate.slice%280,%201%29,%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20NaN,%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20...nonMutate.slice%283%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5D%3B&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false"
       target="_blank">these examples side-by-side on JS Tutor</a>
   </header>
 
   <section class='demo-container'>
-    <section id="mutating">
+    <section id="mutating" class='left-section'>
       <a href='https://medium.com/@timhancodes/javascript-array-methods-cheatsheet-633f761ac250' target='_blank'>
         <h2> Mutating Array Methods</h2>
       </a>
       <h3>(modify the original array)</h3>
 
+      <ol>
 
-      <section id='mutating-array' class='method-section'>
-        <button id='mutating-array-button'>mutated;</button>
-        <a class='docs-link'
-          href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array' target='_blank'>
-          (read the docs)
-        </a>
-      </section>
+        <li>
+          <section id='mutating-array' class='method-section'>
+            print the array:
+            <button id='mutating-array-button'>mutated;</button>
+            <a class='docs-link'
+              href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array'
+              target='_blank'>
+              (read the docs)
+            </a>
+          </section>
+        </li>
 
-      <section id='false-copy' class='method-section'>
+        <!-- <section id='false-copy' class='method-section'>
         <button id='false-copy-button'>const falseCopyOfArray = mutated;</button>
-      </section>
+      </section> -->
 
-      <section id='push' class='method-section'>
-        <input id='push-input' placeholder="newValue"></input>
-        <br>
-        <button id='mutating-push-button'>mutated.push(newValue);</button>
-        <a class='docs-link'
-          href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push'
-          target='_blank'>
-          (read the docs)
-        </a>
-      </section>
+        <li>
+          <section id='push' class='method-section'>
+            add to the end:
+            <input id='push-input' placeholder="newValue"></input>
+            <br>
+            <button id='mutating-push-button'>mutated.push(newValue);</button>
+            <a class='docs-link'
+              href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push'
+              target='_blank'>
+              (read the docs)
+            </a>
+          </section>
+        </li>
 
-      <section id='pop' class='method-section'>
-        <button id='mutating-pop-button'>mutated.pop();</button>
-        <a class='docs-link'
-          href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop'
-          target='_blank'>
-          (read the docs)
-        </a>
-      </section>
+        <li>
+          <section id='pop' class='method-section'>
+            remove from the end:
+            <button id='mutating-pop-button'>mutated.pop();</button>
+            <a class='docs-link'
+              href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop'
+              target='_blank'>
+              (read the docs)
+            </a>
+          </section>
+        </li>
 
-      <section id='unshift' class='method-section'>
-        <input id='unshift-input' placeholder="newValue"></input>
-        <br>
-        <button id='mutating-unshift-button'>mutated.unshift(newValue);</button>
-        <a class='docs-link'
-          href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift'
-          target='_blank'>
-          (read the docs)
-        </a>
-      </section>
+        <li>
+          <section id='unshift' class='method-section'>
+            add to the beginning:
+            <input id='unshift-input' placeholder="newValue"></input>
+            <br>
+            <button id='mutating-unshift-button'>mutated.unshift(newValue);</button>
+            <a class='docs-link'
+              href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift'
+              target='_blank'>
+              (read the docs)
+            </a>
+          </section>
+        </li>
 
-      <section id='shift' class='method-section'>
-        <button id='mutating-shift-button'>mutated.shift();</button>
-        <a class='docs-link'
-          href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift'
-          target='_blank'>
-          (read the docs)
-        </a>
-      </section>
+        <li>
+          <section id='shift' class='method-section'>
+            remove from the beginning:
+            <button id='mutating-shift-button'>mutated.shift();</button>
+            <a class='docs-link'
+              href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift'
+              target='_blank'>
+              (read the docs)
+            </a>
+          </section>
+        </li>
 
+        <li>
+          <section id='reverse' class='method-section'>
+            reverse the array:
+            <button id='mutating-reverse-button'>mutated.reverse();</button>
+            <a class='docs-link'
+              href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse'
+              target='_blank'>
+              (read the docs)
+            </a>
+          </section>
+        </li>
 
-      <section id='reverse' class='method-section'>
-        <button id='mutating-reverse-button'>mutated.reverse();</button>
-        <a class='docs-link'
-          href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse'
-          target='_blank'>
-          (read the docs)
-        </a>
-      </section>
+        <li>
+          <section id='sort' class='method-section'>
+            sort the array:
+            <button id='mutating-sort-button'>mutated.sort();</button>
+            <a class='docs-link'
+              href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort'
+              target='_blank'>
+              (read the docs)
+            </a>
+          </section>
+        </li>
 
-      <section id='sort' class='method-section'>
-        <button id='mutating-sort-button'>mutated.sort();</button>
-        <a class='docs-link'
-          href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort'
-          target='_blank'>
-          (read the docs)
-        </a>
-      </section>
-
-      <section id='splice' class='method-section'>
-        <input id='splice-input-a' placeholder="a"></input>
-        <input id='splice-input-b' placeholder="b"></input>
-        <input id='splice-input-c' placeholder="c"></input>
-        <br>
-        <button id='mutating-splice-button'>mutated.splice(a,b,c);</button>
-        <a class='docs-link'
-          href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice'
-          target='_blank'>
-          (read the docs)
-        </a>
-      </section>
-
+        <li>
+          <section id='splice' class='method-section'>
+            remove entries:
+            <input id='splice-input-a' placeholder="a"></input>
+            <input id='splice-input-b' placeholder="b"></input>
+            <input id='splice-input-c' placeholder="c"></input>
+            <br>
+            <button id='mutating-splice-button'>mutated.splice(a,b,c);</button>
+            <a class='docs-link'
+              href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice'
+              target='_blank'>
+              (read the docs)
+            </a>
+          </section>
+        </li>
+      </ol>
 
       <h3>Mutating Array History</h3>
       <section id='mutating-array-history'></section>
@@ -142,80 +164,107 @@
 
     <section id='non-mutating' class='right-section'>
       <a href='https://vincent.billey.me/pure-javascript-immutable-array/' target='_blank'>
-        <h2>/h2> Non-Mutating Array Methods</h2>
+        <h2> Non-Mutating Array Methods</h2>
       </a>
       <h3>(create a new, modified array)</h3>
 
+      <ol>
 
-      <section id='non-mutating-array' class='method-section'>
-        <button id='non-array-button'>nonMutated;</button>
-        <a class="docs-link"
-          href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array' target='_blank'>
-          (read the docs: Array)
-        </a>
-      </section>
+        <li>
+          <section id='non-mutating-array' class='method-section'>
+            print the original array:
+            <button id='non-array-button'>nonMutated;</button>
+            <a class="docs-link"
+              href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array'
+              target='_blank'>
+              (read the docs: Array)
+            </a>
+          </section>
+        </li>
 
-      <section id='non-copy' class='method-section'>
+        <!-- <section id='non-copy' class='method-section'>
         <button id='non-copy-button'>const trueCopyOfArray = [...nonMutated];</button>
         <a class="docs-link"
           href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax'
           target='_blank'>
           (read the docs: ...)
         </a>
-      </section>
+      </section> -->
 
-      <section id='non-push' class='method-section'>
-        <input id='non-push-input' placeholder="newValue"></input>
-        <br>
-        <button id='non-push-button'>const pushedCopy = [...nonMutated, newValue];</button>
-      </section>
+        <li>
+          <section id='non-push' class='method-section'>
+            add to the end:
+            <input id='non-push-input' placeholder="newValue"></input>
+            <br>
+            <button id='non-push-button'>const pushedCopy = [...nonMutated, newValue];</button>
+          </section>
+        </li>
 
-      <section id='non-pop' class='method-section'>
-        <button id='non-pop-button'>const poppedCopy = nonMutated.slice(0, -1);</button>
-        <a class="docs-link"
-          href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice'
-          target='_blank'>
-          (read the docs: .slice())
-        </a>
-      </section>
+        <li>
+          <section id='non-pop' class='method-section'>
+            remove from the end:
+            <button id='non-pop-button'>const poppedCopy = nonMutated.slice(0, -1);</button>
+            <a class="docs-link"
+              href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice'
+              target='_blank'>
+              (read the docs: .slice())
+            </a>
+          </section>
+        </li>
 
-      <section id='non-unshift' class='method-section'>
-        <input id='non-unshift-input' placeholder="newValue"></input>
-        <br>
-        <button id='non-unshift-button'>const unshiftedCopy = [newValue, ...nonMutated];</button>
-      </section>
+        <li>
+          <section id='non-unshift' class='method-section'>
+            add to the beginning:
+            <input id='non-unshift-input' placeholder="newValue"></input>
+            <br>
+            <button id='non-unshift-button'>const unshiftedCopy = [newValue, ...nonMutated];</button>
+          </section>
+        </li>
 
-      <section id='non-shift' class='method-section'>
-        <button id='non-shift-button'>const shiftedCopy = nonMutated.slice(1);</button>
-      </section>
+        <li>
+          <section id='non-shift' class='method-section'>
+            remove from the beginning:
+            <button id='non-shift-button'>const shiftedCopy = nonMutated.slice(1);</button>
+          </section>
+        </li>
 
+        <li>
+          <section id='non-reverse' class='method-section'>
+            reverse the array:
+            <button id='non-reverse-button'>const reversedCopy = [...nonMutated].reverse();</button>
+            <a class="docs-link"
+              href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse'
+              target='_blank'>
+              (read the docs: .reverse())
+            </a>
+          </section>
+        </li>
 
-      <section id='non-reverse' class='method-section'>
-        <button id='non-reverse-button'>const reversedCopy = [...nonMutated].reverse();</button>
-        <a class="docs-link"
-          href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse'
-          target='_blank'>
-          (read the docs: .reverse())
-        </a>
-      </section>
+        <li>
+          <section id='non-sort' class='method-section'>
+            sort the arrray:
+            <button id='non-sort-button'>const sortedCopy = [...nonMutated].sort();</button>
+            <a class="docs-link"
+              href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort'
+              target='_blank'>
+              (read the docs: .sort())
+            </a>
+          </section>
+        </li>
 
-      <section id='non-sort' class='method-section'>
-        <button id='non-sort-button'>const sortedCopy = [...nonMutated].sort();</button>
-        <a class="docs-link"
-          href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort'
-          target='_blank'>
-          (read the docs: .sort())
-        </a>
-      </section>
+        <li>
+          <section id='non-splice' class='method-section'>
+            remove entries:
+            <input id='non-splice-input-a' placeholder="a"></input>
+            <input id='non-splice-input-b' placeholder="b"></input>
+            <input id='non-splice-input-c' placeholder="c"></input>
+            <br>
+            <button id='non-splice-button'>const splicedCopy = [...nonMutated.slice(0, a), c,
+              ...nonMutated.slice(a + b)];</button>
+          </section>
+        </li>
 
-      <section id='non-splice' class='method-section'>
-        <input id='non-splice-input-a' placeholder="a"></input>
-        <input id='non-splice-input-b' placeholder="b"></input>
-        <input id='non-splice-input-c' placeholder="c"></input>
-        <br>
-        <button id='non-splice-button'>const splicedCopy = [...nonMutated.slice(0, a), c,
-          ...nonMutated.slice(a + b)];</button>
-      </section>
+      </ol>
 
       <h3>Non-Mutating Array History</h3>
       <section id='non-array-history'></section>
